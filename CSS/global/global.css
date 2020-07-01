@@ -20,10 +20,22 @@ body {
   font-weight: 600;
 }
 
+@media (min-width: 768px) {
+  .title {
+    font-size: 1.875rem;
+  }
+}
+
 .paragraph {
   font-size: 1rem;
   font-weight: 400;
   color: #5b5b5b;
+}
+
+@media (min-width: 768px) {
+  .paragraph {
+    font-size: 1.25rem;
+  }
 }
 
 .login__form label,
@@ -37,6 +49,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: #343434;
   outline: none;
+  width: 100%;
   max-width: 300px;
   border: 2px solid #d1d1d1;
   border-radius: 6px;
@@ -75,6 +88,9 @@ input[type='number'] {
 }
 
 .btn {
+  display: block;
+  position: relative;
+  text-decoration: none;
   outline: none;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.25rem;
@@ -82,15 +98,35 @@ input[type='number'] {
   background-color: #4a98ff;
   padding: 0.6em 0;
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 300px;
   border-radius: 6px;
   border: 0;
   cursor: pointer;
 }
 
+.btn--bienestar-personal {
+  background-color: #0dd67f;
+}
+
+.btn--portal-pae {
+  background-color: #ffc258;
+}
+
 .btn:focus,
 .btn:hover {
-  background-color: #177bff;
+  background-color: #3189ff;
+}
+
+.btn--bienestar-personal:focus,
+.btn--bienestar-personal:hover {
+  background-color: #0cca78;
+}
+
+.btn--portal-pae:focus,
+.btn--portal-pae:hover {
+  background-color: #ffb93f;
 }
 
 .btn:active {
@@ -107,9 +143,16 @@ input[type='number'] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 100%;
   padding: 2em 0;
 }

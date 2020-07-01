@@ -1,3 +1,9 @@
+.btn-icon {
+  position: absolute;
+  right: 22px;
+  top: 12px;
+}
+
 .contact__message {
   text-align: center;
 }

@@ -2,10 +2,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
+// Resets
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+// Mixins with media queries
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
 }
 
 // Typography, buttons & input
@@ -22,12 +32,20 @@ body {
 .title {
   font-size: 1.5rem;
   font-weight: 600;
+
+  @include tablet {
+    font-size: 1.875rem;
+  }
 }
 
 .paragraph {
   font-size: 1rem;
   font-weight: 400;
   color: #5b5b5b;
+
+  @include tablet {
+    font-size: 1.25rem;
+  }
 }
 
 .login__form label,
@@ -41,6 +59,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: #343434;
   outline: none;
+  width: 100%;
   max-width: 300px;
   border: 2px solid #d1d1d1;
   border-radius: 6px;
@@ -67,6 +86,9 @@ input[type='number'] {
 }
 
 .btn {
+  display: block;
+  position: relative;
+  text-decoration: none;
   outline: none;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.25rem;
@@ -74,15 +96,35 @@ input[type='number'] {
   background-color: #4a98ff;
   padding: 0.6em 0;
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 300px;
   border-radius: 6px;
   border: 0;
   cursor: pointer;
 }
 
+.btn--bienestar-personal {
+  background-color: #0dd67f;
+}
+
+.btn--portal-pae {
+  background-color: #ffc258;
+}
+
 .btn:focus,
 .btn:hover {
-  background-color: darken($color: #4a98ff, $amount: 10%);
+  background-color: darken($color: #4a98ff, $amount: 5%);
+}
+
+.btn--bienestar-personal:focus,
+.btn--bienestar-personal:hover {
+  background-color: darken($color: #0dd67f, $amount: 2.5%);
+}
+
+.btn--portal-pae:focus,
+.btn--portal-pae:hover {
+  background-color: darken($color: #ffc258, $amount: 5%);
 }
 
 .btn:active {
@@ -98,7 +140,9 @@ input[type='number'] {
 
 .container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   min-height: 100%;
   padding: 2em 0;
 }
