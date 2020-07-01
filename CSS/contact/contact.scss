@@ -1,0 +1,27 @@
+// Typography
+
+// Layout
+
+.contact__message {
+  text-align: center;
+
+  .title {
+    margin-bottom: 0.7em;
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+  .paragraph {
+    margin-bottom: 3em;
+  }
+}
+
+.contact__links {
+  text-align: center;
+
+  .btn {
+    margin-bottom: 1.5em;
+  }
+}

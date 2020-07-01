@@ -1,0 +1,114 @@
+// Font import
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Typography, buttons & input
+
+body {
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #343434;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.paragraph {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #5b5b5b;
+}
+
+.login__form label,
+.login__form input {
+  font-size: 1.25rem;
+  font-weight: 400;
+  display: block;
+}
+
+.login__form input {
+  font-family: 'Montserrat', sans-serif;
+  color: #343434;
+  outline: none;
+  max-width: 300px;
+  border: 2px solid #d1d1d1;
+  border-radius: 6px;
+  padding: 0.6em 0.5em;
+}
+
+.login__form input:focus,
+.login__form input:active {
+  border-color: #4a98ff;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.login__form input::placeholder {
+  color: #a5a5a5;
+}
+
+.btn {
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  color: #fff;
+  background-color: #4a98ff;
+  padding: 0.6em 0;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 6px;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn:focus,
+.btn:hover {
+  background-color: darken($color: #4a98ff, $amount: 10%);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+// Layout
+
+.logo__container {
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+  padding: 2em 0;
+}
+
+.background-img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  max-width: 800px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30%;
+}
