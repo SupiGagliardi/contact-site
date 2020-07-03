@@ -1,6 +1,18 @@
 // Typography and buttons
 
+@mixin large {
+  @media (min-width: 1140px) {
+    @content;
+  }
+}
 // Layout
+
+.login {
+  text-align: left;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .login__welcome-message {
   margin-bottom: 2em;
@@ -15,4 +27,8 @@
   input {
     margin-bottom: 0.8em;
   }
+}
+
+body {
+  overflow: hidden;
 }

@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PAE Contacto</title>
-    <link rel="stylesheet" href="CSS/contact/contact.css" />
     <link rel="stylesheet" href="css/global/global.css" />
+    <link rel="stylesheet" href="CSS/contact/contact.css" />
   </head>
   <body>
     <img
@@ -13,34 +13,81 @@
       src="assets/background.svg"
       alt="Fondo de montañas"
     />
+
     <div class="container">
       <main class="contact">
         <div class="contact__message">
-          <h2 class="title"><span>Contacto via</span> WhatsApp</h2>
+          <h2 class="title contact__header">Centro de contacto PAE</h2>
           <p class="paragraph">
-            Utilice los enlaces para abrir un <br />
-            chat con comunicación directa
+            Utilice los siguientes enlaces para abrir un chat comunicación
+            directa.
           </p>
         </div>
         <div class="contact__links">
-          <a class="btn" href=""
-            >Consulta medica
+          <div class="contact__col">
             <img
-              class="btn-icon"
-              src="assets/whatsapp.svg"
-              alt="Icono de WhatsApp"
-          /></a>
-          <a class="btn btn--bienestar-personal" href=""
-            >Bienestar personal
+              class="contact__icon"
+              src="assets/plus-sign.svg"
+              alt="Icono de salud"
+            />
+            <h3 class="contact__title">Consulta medica</h3>
+            <p class="contact__paragraph">
+              Para cualquier duda médica<br />
+              que pueda llegar a tener.
+            </p>
+            <a
+              class="btn btn--consulta-medica"
+              href="https://wa.link/x7g90j"
+              target="_blank"
+              >Abrir chat
+              <img
+                class="btn-icon"
+                src="assets/whatsapp.svg"
+                alt="Icono de WhatsApp"
+            /></a>
+          </div>
+
+          <div class="contact__col">
             <img
-              class="btn-icon"
-              src="assets/whatsapp.svg"
-              alt="Icono de WhatsApp"
-          /></a>
-          <a class="btn btn--portal-pae" href=""
-            >Portal PAE
-            <img class="btn-icon" src="assets/home.svg" alt="Icono de una casa"
-          /></a>
+              class="contact__icon contact__icon--big"
+              src="assets/medical.svg"
+              alt="Icono de salud"
+            />
+            <h3 class="contact__title">Calidad de vida</h3>
+            <p class="contact__paragraph">
+              Contacto de bienestar personal<br />
+              y calidad de vida.
+            </p>
+            <a
+              class="btn btn--bienestar-personal"
+              href="https://wa.link/ki6q99"
+              target="_blank"
+              >Abrir chat
+              <img
+                class="btn-icon"
+                src="assets/whatsapp.svg"
+                alt="Icono de WhatsApp"
+            /></a>
+          </div>
+
+          <div class="contact__col">
+            <img
+              class="contact__icon"
+              src="assets/news.svg"
+              alt="Icono de salud"
+            />
+            <h3 class="contact__title">Portal bienestar</h3>
+            <p class="contact__paragraph">
+              Visite nuestra web y conozca<br />todos los beneficios PAE.
+            </p>
+            <a class="btn" href="https://elegi-bienestar.com/" target="_blank"
+              >Visitar web
+              <img
+                class="btn-icon"
+                src="assets/home.svg"
+                alt="Icono de una casa"
+            /></a>
+          </div>
         </div>
       </main>
       <div class="logo__container">

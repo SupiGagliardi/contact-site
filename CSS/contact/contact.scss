@@ -1,4 +1,38 @@
+@mixin large {
+  @media (min-width: 1140px) {
+    @content;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
 // Typography & buttons
+
+.contact__header {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 0.3em;
+}
+
+.contact__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+
+  @include large {
+    font-size: 1.3rem;
+  }
+}
+
+.contact__paragraph {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #5e5e5e;
+  margin-bottom: 2.5em;
+
+  @include large {
+    font-size: 1.175rem;
+  }
+}
 
 .btn-icon {
   position: absolute;
@@ -11,16 +45,22 @@
 .contact__message {
   text-align: center;
 
-  .title {
-    margin-bottom: 0.7em;
-
-    span {
-      font-weight: 400;
-    }
-  }
-
   .paragraph {
     margin-bottom: 3em;
+  }
+
+  @include large {
+    text-align: left;
+  }
+}
+
+.contact__icon {
+  margin-bottom: 1em;
+}
+
+@include large {
+  .contact__icon--big {
+    margin-bottom: 0.8em;
   }
 }
 
@@ -29,5 +69,38 @@
 
   .btn {
     margin-bottom: 1.5em;
+  }
+
+  .contact__paragraph {
+    text-align: left;
+  }
+
+  @include large {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8.5em;
+  }
+}
+
+.contact__col {
+  margin-bottom: 5em;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include large {
+    margin: 0;
+  }
+}
+
+@include large {
+  body {
+    overflow: hidden;
+  }
+}
+
+@include large {
+  .background-img {
+    top: 20%;
   }
 }
